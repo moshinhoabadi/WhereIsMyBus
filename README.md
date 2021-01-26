@@ -28,7 +28,7 @@ In this file we:
 
 - We assume that our VM is active.
 - First, run the file "**Activate.py"**. This file will turn on the application.
-- In addition, run the notebook "**project.ipynb**" in databricks.
+- In addition, run the notebook "**project.ipynb**" in databricks. Before running the notebook, you can change the default IP to a Kafka server (for stream data) or the path (for batch data).
 - Then, enter a browser and enter the url: **http://127.0.0.1:5000** for seeing our application. You will be directed to the home page. 
 
 
