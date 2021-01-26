@@ -71,7 +71,7 @@ Screenshot of the "Analyze Past Data" section:
  NOTE: These examples are relevant only if they have already appeared in the stream data. 
  1. line id = 007A; direction = 0; vehicle id = 28052; date = 03.13.2018 (format mm/dd/yyyy)
  2. line id = 0112; direction = 0; vehicle id = 33565; date = 07.03.2017 (format mm/dd/yyyyy).
- 3. any irregular trip that is shown in the the "Live Monitoring" page.
+ 3. Any irregular trip that is shown in the the "Live Monitoring" page.
 
 # Image Credits
 
