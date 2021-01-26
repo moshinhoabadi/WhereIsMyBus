@@ -1,7 +1,7 @@
 
 # Data Gathering & Management Project - Where Is My Bus
 #### by: Roi Rimer, Moshe Abadi
-#### **NOTE**: This is not our project report.
+#### **NOTE**: This is not our project report. For the full report, read **reoprt.pdf** file.
 In this file we:
  - Summarize our project
  - Explain how to use our application
