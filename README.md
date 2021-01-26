@@ -61,7 +61,8 @@ Screenshot of the "Analyze Past Data" section:
 
 
 ### Input Examples for the "Analyze Past Data" Section: 
- the next inputs have matching reports, therefore will return an output map. 
+ The next inputs have matching reports, therefore will return an output map.
+ NOTE: These examples are relevant only if they have already appeared in the stream data. 
  1. line id = 007A; direction = 0; vehicle id = 28052; date: 03.13.2018 (format mm.dd.yyyy)
  2. 
 
