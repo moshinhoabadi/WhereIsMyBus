@@ -18,7 +18,7 @@ In this file we:
  For each irregular trip, the user can see a map with the reports from the irregular trip (red color), compared to another reports which came from the same bus line in the same day (green color). The user can use this map for analyzing the irregular trip. In addition, the user can see how much the model succeeded (on average) in predicing the correct delay values for the irregular trip. We will use the RMSE and Accuracy measures.
  
  In the "Analyze Past Data" section, the user can enter the next input: date, line id, direction of the trip and vehicle id.
- The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip will be colored in blue, and the other in green. In addition, the user can see how much the model succeeded (on average) in predicing the correct delay values for the selected trip (selected input). We will use the RMSE and Accuracy measures.
+ The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip (not have to be an irregular trip) will be colored in red, and the other in green. In addition, the user can see how much the model succeeded (on average) in predicing the correct delay values for the selected trip (selected input). We will use the RMSE and Accuracy measures.
 
 ### Requirements ###
 - Use **pip install -r requirement.txt** for installing the relevant packages for this project.
