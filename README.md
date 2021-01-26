@@ -31,13 +31,19 @@ In this file we:
 - In addition, run the notebook "**project.ipynb**" in databricks.
 - Then, enter a browser and enter the url: **http://127.0.0.1:5000** for seeing our application. You will be directed to the home page. 
 
-![Alt text](images/homepage.png?raw=true "Title")
 
 - **Home Page**: On the home page, the user can select if he/she wants to go to the "Live Monitoring" section or to the "Analyze Past Data" section by clicking on the matching icons, or by using a menu that is located at the top right corner.
+Screenshot of home page:
+![Alt text](images/homepage.png?raw=true "Title")
 
-- **The "Live Monitoring" Section**: On this page, the user can see a table of the irregular trips detected until to the very moment. For each trip, the user can see details like the line id, the direction, the date, relevant tweets, relevant evnents, etc. In addition, there is a link attached for each report in the table. The user can click on the link and see a relevant map for the selected trip. The map will function as described earlier. 
+
+- **The "Live Monitoring" Section**: On this page, the user can see a table of the irregular trips detected until to the very moment. For each trip, the user can see details like the line id, the direction, the date, relevant tweets, relevant evnents, etc. In addition, there is a link attached for each report in the table. The user can click on the link and see a relevant map for the selected trip. The map will function as described earlier.
+Screenshot of this page:
+![Alt text](images/live_menu.png?raw=true "Title")
 
 - **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. The applicaiton will return a map with the reports in the current date as described earlier.
+Screenshot of this page:
+![Alt text](images/analyze.png?raw=true "Title")
 
 
 ### Input Examples:
