@@ -1,0 +1,6 @@
+elasticsearch==7.10.1
+espandas==1.0.4
+Flask==1.1.2
+folium==0.12.1
+pandas==0.25.3
+pexpect==4.8.0
