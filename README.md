@@ -13,18 +13,22 @@ In this file we:
  2. Detecting irregular bus trips and notify the user about them (Part 2 of the project).
  
 For these purposes, we desinged an application which enables live monitoring of the bus traffic in Dublin. In addition, the application lets the user to search for past bus trips by date, line id, direction of the trip, and vehicle id.
- 
-In the "Live Monitoring" section, the user can see an updated table of the irregular trips that our model detected. The list is updated every 30 seconds.
+Besides the Dublin dataset, we also use data about main events in Dublin, and data about tweets from the twitter page "dublinbusnews". Those datasets are ingerated with the main dataset, and are used for trying to explain the reason for irregular trips.
+
+### Our Application - Details  
+The application has two main sections: the "Live Monitoring" section, and the "Analyze Past Data" section.
+
+In the "Live Monitoring" section, the user can see an updated table of the irregular trips that our model detected. The table is updated every 30 seconds.
 For each irregular trip, there is a link in the table. The user can click on the link for watching a map with the reports from the irregular trip (red color), compared to another reports which came from the same bus line in the same day (green color). The user can use this map for analyzing the irregular trip. In addition, the user can see Above the map some additional useful information:
  - How much the model succeeded (on average) in predicing the correct delay values for the irregular trip. We will use the RMSE and Accuracy measures.
  - Tweets that were uploaded during the irregular trip.
  - Nearby events which took place when the irregular trip happened.
  
  In the "Analyze Past Data" section, the user can enter the next input: date, line id, direction of the trip and vehicle id.
- The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip (not have to be an irregular trip) will be colored in red, and the other in green. In addition, the user can see Above the map some additional useful information:
- - How much the model succeeded (on average) in predicing the correct delay values for the selected trip. We will use the RMSE and Accuracy measures.
- - Tweets that were uploaded during the selected trip.
- - Nearby events which took place when the selected trip happened
+ The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip (not have to be an irregular trip) will be colored in red, and the other in green. In addition, **if the selected trip is irregular trip**, the user will see Above the map some additional useful information:
+ - How much the model succeeded (on average) in predicing the correct delay values for the irregular trip. We will use the RMSE and Accuracy measures.
+ - Tweets that were uploaded during the irregular trip.
+ - Nearby events which took place when the irregular trip happened
 
 ### Requirements ###
 - Use **pip install -r requirement.txt** for installing the relevant packages for this project.
@@ -50,7 +54,7 @@ Screenshot of the "Live Monitoring" section:
 
 ![Alt text](images/live_menu.png?raw=true "Title")
 
-- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will the map with the reports in the current date (and the additional data) as described earlier. Otherwise, the application will direct the user to a unique "no data found" page.
+- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will show the map with the reports in the current date (and the additional data) as described earlier. Otherwise, the application will direct the user to a unique "no data found" page.
 Screenshot of the "Analyze Past Data" section:
 
 ![Alt text](images/analyze.png?raw=true "Title")
