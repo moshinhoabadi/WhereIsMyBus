@@ -43,7 +43,7 @@ Screenshot of this page:
 
 ![Alt text](images/live_menu.png?raw=true "Title")
 
-- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. The applicaiton will return a map with the reports in the current date as described earlier.
+- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will return a map with the reports in the current date as described earlier. Otherwise, the application will direct the user to an unique "no data found" page.
 Screenshot of this page:
 
 ![Alt text](images/analyze.png?raw=true "Title")
@@ -53,6 +53,9 @@ Screenshot of this page:
  - The "Live Monitoring" Section:
  
  - The "Analyze Past Data" Section:
+ the next inputs have matching reports, therefore will return an output map. 
+ 1. line id = 007A; direction = 0; vehicle id = 28052; date: 03.13.2018 (format mm.dd.yyyy)
+ 2. 
 
 # Image Credits
 
