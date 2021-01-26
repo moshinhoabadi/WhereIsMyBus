@@ -12,13 +12,19 @@ In this file we:
  1. Predicting value range (label between 0-8) for the "delay" feature (Part 1 of the project).
  2. Detecting irregular bus trips and notify the user about them (Part 2 of the project).
  
- For these purposes, we desinged an application which enables live monitoring of the bus traffic in Dublin. In addition, the application lets the user to search for past bus trips by date, line id, direction of the trip, and vehicle id.
+For these purposes, we desinged an application which enables live monitoring of the bus traffic in Dublin. In addition, the application lets the user to search for past bus trips by date, line id, direction of the trip, and vehicle id.
  
- In the "Live Monitoring" section, the user can see an updated list of the irregular trips that our model detected. The list is updated every 30 seconds. In addition, the user can see tweets and nearby events for each irreglar trips, for trying to understand why the bus did not drive in its regular path.
- For each irregular trip, the user can see a map with the reports from the irregular trip (red color), compared to another reports which came from the same bus line in the same day (green color). The user can use this map for analyzing the irregular trip. In addition, the user can see how much the model succeeded (on average) in predicing the correct delay values for the irregular trip. We will use the RMSE and Accuracy measures.
+In the "Live Monitoring" section, the user can see an updated table of the irregular trips that our model detected. The list is updated every 30 seconds.
+For each irregular trip, there is a link in the table. The user can click on the link for watching a map with the reports from the irregular trip (red color), compared to another reports which came from the same bus line in the same day (green color). The user can use this map for analyzing the irregular trip. In addition, the user can see Above the map some additional useful information:
+ - How much the model succeeded (on average) in predicing the correct delay values for the irregular trip. We will use the RMSE and Accuracy measures.
+ - Tweets that were uploaded during the irregular trip.
+ - Nearby events which took place when the irregular trip happened.
  
  In the "Analyze Past Data" section, the user can enter the next input: date, line id, direction of the trip and vehicle id.
- The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip (not have to be an irregular trip) will be colored in red, and the other in green. In addition, the user can see how much the model succeeded (on average) in predicing the correct delay values for the selected trip (selected input). We will use the RMSE and Accuracy measures.
+ The appliaction will return a map with all the reports of the selected vehicle in the selected line id and direction for the selected date. Reports from the selected trip (not have to be an irregular trip) will be colored in red, and the other in green. In addition, the user can see Above the map some additional useful information:
+ - How much the model succeeded (on average) in predicing the correct delay values for the selected trip. We will use the RMSE and Accuracy measures.
+ - Tweets that were uploaded during the selected trip.
+ - Nearby events which took place when the selected trip happened
 
 ### Requirements ###
 - Use **pip install -r requirement.txt** for installing the relevant packages for this project.
@@ -38,21 +44,19 @@ Screenshot of home page:
 ![Alt text](images/homepage.png?raw=true "Title")
 
 
-- **The "Live Monitoring" Section**: On this page, the user can see a table of the irregular trips detected until to the very moment. For each trip, the user can see details like the line id, the direction, the date, relevant tweets, relevant evnents, etc. In addition, there is a link attached for each report in the table. The user can click on the link and see a relevant map for the selected trip. The map will function as described earlier.
-Screenshot of this page:
+- **The "Live Monitoring" Section**: On this page, the user can see a table of the irregular trips detected until to the very moment. For each trip, the user can see details like the line id, the direction, the date, relevant tweets, relevant evnents, etc. In addition, there is a link attached for each report in the table. The user can click on the link and see a relevant map for the selected trip. The page with the map will function as described earlier.
+Note: We recommend to open the links on another tab. Otherwise, the main page in this section page can interrupt the new page due to the refreshing process.
+Screenshot of the "Live Monitoring" section:
 
 ![Alt text](images/live_menu.png?raw=true "Title")
 
-- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will return a map with the reports in the current date as described earlier. Otherwise, the application will direct the user to an unique "no data found" page.
-Screenshot of this page:
+- **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will the map with the reports in the current date (and the additional data) as described earlier. Otherwise, the application will direct the user to a unique "no data found" page.
+Screenshot of the "Analyze Past Data" section:
 
 ![Alt text](images/analyze.png?raw=true "Title")
 
 
-### Input Examples:
- - The "Live Monitoring" Section:
- 
- - The "Analyze Past Data" Section:
+### Input Examples for the "Analyze Past Data" Section: 
  the next inputs have matching reports, therefore will return an output map. 
  1. line id = 007A; direction = 0; vehicle id = 28052; date: 03.13.2018 (format mm.dd.yyyy)
  2. 
