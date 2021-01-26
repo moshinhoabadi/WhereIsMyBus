@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<title>Where is my iBus?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="logo"><strong>Where is my Bus? </strong> by Roi Rimer & Moshe Abadi</a>
+					<nav id="nav">
+						<a href="/">Home</a>
+						<a href="live_menu">Live Menu</a>
+						<a href="analyze">Analyze</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Anomaly Reports</h2>
+						<p>This table shows real time busses that are out of their regular path.
+						<br> It also shows Relevant tweets or events for these busses (if there are any).
+						<br>The page will be reloaded in <span id="countdowntimer">10 </span> seconds.</p>
+						<span class="icon w3-spin w3-jumbo fa fa-refresh"></span>
+						<br><br>
+
+					<script type="text/javascript">
+					    var timeleft = 30;
+					    var downloadTimer = setInterval(function(){
+					    timeleft--;
+					    document.getElementById("countdowntimer").textContent = timeleft;
+					    if(timeleft <= 0)
+					        clearInterval(downloadTimer);
+					    },1000);
+					</script>
+					</header>
+
+
+					{{ table|safe }}
+
+				</div>
+			</section>
+
+
+		<!-- Scripts -->
+			<script type="text/javascript">
+				setTimeout(function(){
+				   window.location.reload(1);
+				}, 30000);
+			</script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

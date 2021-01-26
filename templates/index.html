@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Where is my Bus?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="" class="logo"><strong>Where is my Bus? </strong> by Roi Rimer & Moshe Abadi</a>
+					<nav id="nav">
+						<a href="">Home</a>
+						<a href="live_menu">Live Menu</a>
+						<a href="analyze">Analyze</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Where is my Bus?</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div style="cursor: pointer;" onclick="window.location='live_menu';">
+							<span class="icon fa-bus"></span>
+							<h3>See Live Traffic</h3>
+							<p> Click here for trying</p>
+						</div>
+
+
+						<div style="cursor: pointer;" onclick="window.location='analyze';">
+							<span class="icon fa-database"></span>
+							<h3>Analyze Past Data</h3>
+							<p>Click here for trying</p>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+
+
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

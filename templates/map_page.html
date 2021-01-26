@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
+
+		<title>Where is my Bus?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="logo"><strong>Where is my Bus? </strong> by Roi Rimer & Moshe Abadi</a>
+					<nav id="nav">
+						<a href="/">Home</a>
+						<a href="live_menu">Live Menu</a>
+						<a href="analyze">Analyze</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+
+					{% if rmse is defined %}
+					
+					<header class="align-center">
+						<h2>Line {{ lineId }}</h2>
+
+						<p>Is having a different path comparing to past data.</p>
+					</header>
+					<div class="image round left">
+						<img src="{{ url_for('static', filename='images/bus.jpeg') }}" alt="Pic 01" />
+					</div>
+
+					<p>
+						You might want to contact the bus driver.
+						<br>
+						Green dots represent past reports, and red dots represent new reports that were identified as anomaly reports.
+					</p>
+
+					<p>
+						Delay prediction performance on the selected trip:
+						<br>
+						RMSE = {{ rmse }} (low is better)
+						<br>
+						Accuracy = {{ acc }} (high is better)
+					</p>
+					
+					{% endif %}
+
+					
+					{% if rmse is not defined %}
+
+					<header class="align-center">
+						<h2>Line {{ lineId }}</h2>
+
+						<p>This trip wasn't recognized as anomaly.</p>					
+					</header>
+
+					<div class="image round left">
+						<img src="{{ url_for('static', filename='images/bus.jpeg') }}" alt="Pic 01" />
+					</div>
+
+					{% endif %}
+
+
+					{% if tweets is defined %}
+					{% if tweets|length > 0 %}
+					<ul>
+					    {% for tweet in tweets %}
+			                <li>{{ tweet }}</li>
+					    {% endfor %}
+					</ul>
+					{% endif %}
+					{% endif %}
+
+
+					{% if events is defined %}
+					{% if events|length > 0 %}
+					<ul>
+					    {% for event in events %}
+			                <li>{{ event }}</li>
+					    {% endfor %}
+					</ul>
+					{% endif %}
+					{% endif %}
+
+
+
+					<iframe class="map align-center" style="width: 100%; height:720px" src="/map_{{map_name}}"></iframe>
+
+
+
+				</div>
+			</section>
+
+
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>
