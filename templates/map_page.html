@@ -78,6 +78,9 @@
 
 					{% if tweets is defined %}
 					{% if tweets|length > 0 %}
+					<p>
+						Tweets from the same time:
+					</p>
 					<ul>
 					    {% for tweet in tweets %}
 			                <li>{{ tweet }}</li>
@@ -89,6 +92,10 @@
 
 					{% if events is defined %}
 					{% if events|length > 0 %}
+					<p>
+						Nearby events from the same time:
+					</p>
+
 					<ul>
 					    {% for event in events %}
 			                <li>{{ event }}</li>

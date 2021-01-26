@@ -1,1 +1,3 @@
-""
+,Unnamed: 0,Unnamed: 0.1,anomaly_id,day,directionLine,events_around,month,patternLine,prediction_acc,prediction_rmse,relevant_tweets,vehicleId,year
+0,0,0,0,4,0,set(),7,044B,0.043478261,3.826086957,set(),28051,2017
+1,1,1,1,3,0,set(),7,0122,0.043478261,3.826086957,['Diversion on route of #DB122'],33565,2017

@@ -130,13 +130,11 @@ def liveMonitoring_map(map_name):
 						  (menu_df['month']==int(month)) & (menu_df['day']==int(day))]
 	
 	if map_row.empty: # not anomaly
-		print()
 		return render_template("map_page.html", map_name=map_name, lineId=patternLine)
 
-
 	return render_template("map_page.html", map_name=map_name, lineId=patternLine, 
-						   tweets=list(eval(map_row['relevant_tweets'][0])), events=list(eval(map_row['events_around'][0])),
-						   rmse=round(map_row['prediction_rmse'][0], 3), acc=round(map_row['prediction_acc'][0], 3))
+						   tweets=list(eval(map_row['relevant_tweets'].iloc[0])), events=list(eval(map_row['events_around'].iloc[0])),
+						   rmse=round(map_row['prediction_rmse'].iloc[0], 3), acc=round(map_row['prediction_acc'].iloc[0], 3))
 
 
 @app.route('/map_<map_name>')
