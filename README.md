@@ -55,6 +55,11 @@ Screenshot of the "Live Monitoring" section:
 
 ![Alt text](images/live_menu.png?raw=true "Title")
 
+Example for the page with the map (and the additional details for irregular trip):
+
+![Alt text](images/map.png?raw=true "Title")
+
+
 - **The "Analyze Past Data" Section**: On this page, the user can choose a date, a line id, a direction and a vehicle id (from dropdown lists). Then, the user can submit the request. If there are matching reports, The applicaiton will show the map with the reports in the current date (and the additional data) as described earlier. Otherwise, the application will direct the user to a unique "no data found" page.
 Screenshot of the "Analyze Past Data" section:
 
