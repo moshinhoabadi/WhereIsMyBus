@@ -31,7 +31,7 @@ For each irregular trip, there is a link in the table. The user can click on the
  - Nearby events which took place when the irregular trip happened
 
 ### Requirements ###
-- Use **pip install -r requirement.txt** for installing the relevant packages for this project.
+- Use **pip install -r requirements.txt** for installing the relevant packages for this project.
 - In addition, please install Spark version 2.4.5. 
 
 ### How to Use The Application:
